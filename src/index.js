@@ -26,9 +26,7 @@ const App = () => {
 
   const filtered = search
     ? data.filter((d) =>
-        d.mission_name
-          .toLocaleLowerCase()
-          .startsWith(search.toLocaleLowerCase())
+        d.mission_name.toLocaleLowerCase().includes(search.toLowerCase())
       )
     : data;
 
